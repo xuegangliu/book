@@ -7,7 +7,7 @@
     * [Linux](Development/Linux/README.md)
     * [数据库](Development/Sql/README.md)
     * [数据结构与算法](Development/StructuresAlgorithms/README.md)
-    * [python](Development/StructuresAlgorithms/README.md)
+    * [python](Development/Python/README.md)
     * [工具](Development/Tools/README.md)
 * [读书记录](Book/README.md)
 * [网站收藏](Site/README.md)
