@@ -15,4 +15,5 @@
 * [友情链接](Link/README.md)
 * [个人介绍](Self/README.md)
 * [影视](Movie/README.md)
-
+* [推荐](Recommended/README.md)
+* [感谢](Thank/README.md)
