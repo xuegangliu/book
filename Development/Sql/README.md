@@ -1,5 +1,3 @@
-# SQL
-
 # Oracle 常用SQL
 
 ## 基本
@@ -117,3 +115,4 @@
 
 
 [oracle基本sql](https://www.cnblogs.com/wishyouhappy/p/3700683.html)
+

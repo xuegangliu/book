@@ -1,5 +1,3 @@
-# LINUX
-
 ## 命令帮助
 >> 命令的简要说明 whatis command | info command | man command
 >> 命令路径 which command
@@ -60,6 +58,7 @@ ln -s cc ccTo :符号链接(软链接)；删除源，另一个无法使用；（
 cat -v record.log | grep AAA | grep -v BBB | wc -l
 ```
 
+---------
 ## 程序构建
 ### 1.配置 -> 2.编译 -> 3.安装
 1. 配置做的工作主要是检查当前环境是否满足要安装软件的依赖关系，以及设置程序安装所需要的初始化信息，比如安装路径，需要安装哪些组件；配置完成，会生成makefile文件供第二步make使用；
@@ -73,11 +72,9 @@ cat -v record.log | grep AAA | grep -v BBB | wc -l
     make install
 ```
 
--------
+---------
 ## 程序调试
 ### gdb 程序交互调试
-
--------
 ## 性能优化
 ### 系统
 ```
@@ -106,6 +103,7 @@ top第三行显示当前系统的，其中有两个值很关键:
     > pstack [pid]
 - strace用来跟踪进程中的系统调用
 
+-------
 ## 常用工具
 
 ### gdb 调试利器
