@@ -6,6 +6,7 @@
     1. [内存管理机制](Java/process/README.md)   
     2. [JVM性能调优](Java/jvm/README.md)    
     3. [tomcat优化](Java/tomcat/README.md)
+    4. [jvm命令工具](Java/cmdTools/README.md)
 * [Linux](Linux/README.md)
     1. [帮助](Linux/help/README.md)   
     2. [程序构建](Linux/build/README.md)    
