@@ -1,5 +1,6 @@
 # 前言
 
-日常记录
+![Hello!](../img/perfect.png)
 
-![Hello!](perfect.png)
+
+**There is no end,There is no goodby!**
