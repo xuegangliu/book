@@ -1,7 +1,7 @@
 ## apache
 
 ## apache 基础配置
-[配置详解](Apache配置详解)
+[配置详解](http://httpd.apache.org/docs/2.4/)
 
 
 
