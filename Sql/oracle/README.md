@@ -1,5 +1,60 @@
 # Oracle 常用SQL
 
+## 生产常用sql
+    --锁表查询
+    SELECT object_name, machine, s.sid, s.serial#
+      FROM gv$locked_object l, dba_objects o, gv$session s
+     WHERE l.object_id　 = o.object_id
+       AND l.session_id = s.sid;
+    --验证
+    SELECT 'ALTER system kill session ''' ||s.sid||','||s.serial#||''''
+      FROM gv$locked_object l, dba_objects o, gv$session s
+     WHERE l.object_id　 = o.object_id
+       AND l.session_id = s.sid;
+    --杀掉
+    ALTER system kill session '2631,41719';
+    
+    --有大量数据时，快速删除字段
+    --alter table xxx set unused column xxxxx;
+    --alter table xxx drop unused columns;
+    
+    --存储过程终止
+    --0.查询正在执行的存储过程
+    select *
+      from v$db_object_cache
+     where locks > 0
+       and pins > 0
+       and type = 'PROCEDURE';
+    --1. 在V$ACCESS视图中找到要停止进程的SID: 
+    SELECT t.* FROM V$ACCESS t WHERE t.object='LXG_TOWERIDERR'; 
+    SELECT SID FROM V$ACCESS WHERE  object='LXG_TOWERIDERR';
+    --2. 在V$SESSION视图中查找到查出SID和SERIAL#
+    SELECT SID,SERIAL# FROM V$SESSION WHERE SID='1314'; 
+    select * from   V$SESSION;
+    --3. 杀掉查找出来的进程
+    --alter system kill session 'SID,SERIAL#'
+    alter system kill session '1314,63759';  
+    
+    --查询当前数据库正在执行的sql
+    select a.program, b.spid, c.sql_text, c.SQL_ID
+      from v$session a, v$process b, v$sqlarea c
+     where a.paddr = b.addr
+       and a.sql_hash_value = c.hash_value
+       and a.username is not null;
+       
+    --查看回收站的当前状态  果返回值为“on”表明回收站是启动的，“off”表明是关闭的
+    SELECT Value FROM V$parameter WHERE Name = 'recyclebin';
+    --获取回收站里的内容  
+    SELECT * FROM RECYCLEBIN;      
+    SELECT * FROM USER_RECYCLEBIN a order by a.createtime desc;      
+    SELECT * FROM DBA_RECYCLEBIN a order by a.createtime desc; 
+    --还原被删除的对象
+    FLASHBACK TABLE xx TO BEFORE DROP RENAME TO new_xx;
+    --清空回收站
+    PURGE TABLE xx; --清空一个特定的表
+    PURGE INDEX xx; --清空一个特定的索引
+    PURGE RECYCLEBIN; --清空回收站
+    DROP TABLE table PURGE;--当一个表被删除（drop）时就直接从回收站中清空
 ## 基本
 ```oracle
 新建表：
