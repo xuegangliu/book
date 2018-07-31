@@ -12,6 +12,7 @@
     2. [程序构建](Linux/build/README.md)    
     3. [常用工具](Linux/tools/README.md)
     4. [docker](Linux/docker/README.md)
+    5. [vim使用](Linux/vim/README.md)
 * [数据库](Sql/README.md)
     1. [Oracle 常用sql](Sql/oracle/README.md)   
     2. [mysql 优化](Sql/mysql/README.md)    

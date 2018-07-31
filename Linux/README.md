@@ -3,4 +3,5 @@
 1. [帮助](help/README.md)   
 2. [程序构建](build/README.md)    
 3. [常用工具](tools/README.md)
-3. [Docker](docker/README.md)
+4. [Docker](docker/README.md)
+5. [vim使用](vim/README.md)
