@@ -2,6 +2,19 @@
 >> 命令的简要说明 whatis command | info command | man command
 >> 命令路径 which command
 
+## 显示历史命令
+使用 HISTTIMEFORMAT 显示时间戳
+```
+# export HISTTIMEFORMAT='%F %T '
+# history | more
+1 2018-05-02 19:02:39 service network restart
+2 2018-05-02 19:02:39 exit
+3 2018-05-02 19:02:39 id
+4 2018-05-02 19:02:39 cat /etc/redhat-release
+```
+
+
+
 ## 目录
 ```
 创建：mkdir
