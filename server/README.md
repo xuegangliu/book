@@ -2,4 +2,4 @@
 
 1. [Nginx](nginx/README.md)   
 
-2. [Apache](apache/README.md)   
+1. [Apache](apache/README.md)   
