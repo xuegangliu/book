@@ -1,39 +1,15 @@
 # 常用工具
 
-### gdb 调试利器
+[Linux工具链接](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/index.html)
 
-### ldd 查看程序依赖库
+## 检测远程端口是否打开
 
-### lsof 一切皆文件
+1. `telnet 110.101.101.101 80`方式测试远程主机端口是否打开
 
-### ps 进程查看器
+1. `nmap ip -p port` 测试端口
+nmap ip 显示全部打开的端口
+根据显示close/open确定端口是否打开
 
-### pstack 跟踪进程栈
+1. `nc -v host port`
+端口未打开返回状态为非0
 
-### strace 跟踪进程中的系统调用
-
-### ipcs 查询进程间通信状态
-
-### top linux下的任务管理器
-
-### free 查询可用内存
-
-### vmstat 监视内存使用情况
-
-### iostat 监视I/O子系统
-
-### sar 找出系统瓶颈的利器
-
-### readelf elf文件格式分析
-
-### objdump 二进制文件分析
-
-### nm 目标文件格式分析
-
-### size 查看程序内存映像大小
-
-### wget 文件下载
-
-### scp 跨机远程拷贝
-
-### crontab 定时任务
