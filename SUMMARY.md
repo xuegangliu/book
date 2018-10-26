@@ -23,7 +23,8 @@
 1. [服务器](server/README.md)
     1. [Nginx](server/nginx/README.md)
     1. [Apache](server/apache/README.md)
-1. [影视](Movie/README.md)
-1. [推荐](Recommended/README.md)
+1. [其它](Other/README.md)
+    1. [影视](Other/movie/README.md)
+    1. [书籍推荐](Other/recommended/README.md)
 1. [感谢](Thank/README.md)
 

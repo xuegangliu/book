@@ -1,4 +1,6 @@
-# python3基础认识
+# python3基础认识 
+
+```练习代码->``` [code](https://github.com/xuegangliu/python)
 
 * 规定 缩进规定、多行语句(+\)
 * 指定源码编码
