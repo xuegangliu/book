@@ -1,0 +1,679 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JVM性能调优 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../tomcat/" />
+    
+    
+    <link rel="prev" href="../process/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Preface/">
+            
+                <a href="../../Preface/">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../process/">
+            
+                <a href="../process/">
+            
+                    
+                    内存管理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JVM性能调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../tomcat/">
+            
+                <a href="../tomcat/">
+            
+                    
+                    tomcat优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../cmdTools/">
+            
+                <a href="../cmdTools/">
+            
+                    
+                    jvm命令工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Linux/">
+            
+                <a href="../../Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Linux/help/">
+            
+                <a href="../../Linux/help/">
+            
+                    
+                    帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Linux/build/">
+            
+                <a href="../../Linux/build/">
+            
+                    
+                    程序构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Linux/tools/">
+            
+                <a href="../../Linux/tools/">
+            
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Linux/docker/">
+            
+                <a href="../../Linux/docker/">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../Linux/vim/">
+            
+                <a href="../../Linux/vim/">
+            
+                    
+                    vim使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../Linux/config/">
+            
+                <a href="../../Linux/config/">
+            
+                    
+                    配置介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Python/">
+            
+                <a href="../../Python/">
+            
+                    
+                    Python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Sql/">
+            
+                <a href="../../Sql/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Sql/oracle/">
+            
+                <a href="../../Sql/oracle/">
+            
+                    
+                    Oracle 常用sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Sql/mysql/">
+            
+                <a href="../../Sql/mysql/">
+            
+                    
+                    mysql 优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../StructuresAlgorithms/">
+            
+                <a href="../../StructuresAlgorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../StructuresAlgorithms/java/">
+            
+                <a href="../../StructuresAlgorithms/java/">
+            
+                    
+                    Java常用数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../server/">
+            
+                <a href="../../server/">
+            
+                    
+                    服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../server/nginx/">
+            
+                <a href="../../server/nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../server/apache/">
+            
+                <a href="../../server/apache/">
+            
+                    
+                    Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Other/">
+            
+                <a href="../../Other/">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../Other/movie/">
+            
+                <a href="../../Other/movie/">
+            
+                    
+                    影视
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../Other/recommended/">
+            
+                <a href="../../Other/recommended/">
+            
+                    
+                    书籍推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../Thank/">
+            
+                <a href="../../Thank/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JVM性能调优</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jvm&#x6027;&#x80FD;&#x8C03;&#x4F18;">JVM&#x6027;&#x80FD;&#x8C03;&#x4F18;</h1>
+<h2 id="&#x4E00;&#x3001;jvm&#x5185;&#x5B58;&#x6A21;&#x578B;&#x53CA;&#x5783;&#x573E;&#x6536;&#x96C6;&#x7B97;&#x6CD5;">&#x4E00;&#x3001;JVM&#x5185;&#x5B58;&#x6A21;&#x578B;&#x53CA;&#x5783;&#x573E;&#x6536;&#x96C6;&#x7B97;&#x6CD5;</h2>
+<h3 id="1&#x6839;&#x636E;java&#x865A;&#x62DF;&#x673A;&#x89C4;&#x8303;&#xFF0C;jvm&#x5C06;&#x5185;&#x5B58;&#x5212;&#x5206;&#x4E3A;&#xFF1A;">1.&#x6839;&#x636E;Java&#x865A;&#x62DF;&#x673A;&#x89C4;&#x8303;&#xFF0C;JVM&#x5C06;&#x5185;&#x5B58;&#x5212;&#x5206;&#x4E3A;&#xFF1A;</h3>
+<ul>
+<li>New&#xFF08;&#x5E74;&#x8F7B;&#x4EE3;)[&#x542F;&#x52A8;&#x5206;&#x914D;&#x5806;&#x5185;&#x5B58;]&#xFF08;-Xmx:3G&#xFF09;
+ &#x5E74;&#x8F7B;&#x4EE3;&#x7528;&#x6765;&#x5B58;&#x653E;JVM&#x521A;&#x5206;&#x914D;&#x7684;Java&#x5BF9;&#x8C61;<ul>
+<li>Eden&#xFF1A;Eden&#x7528;&#x6765;&#x5B58;&#x653E;JVM&#x521A;&#x5206;&#x914D;&#x7684;&#x5BF9;&#x8C61;</li>
+<li>Survivor1</li>
+<li>Survivro2&#xFF1A;&#x4E24;&#x4E2A;Survivor&#x7A7A;&#x95F4;&#x4E00;&#x6837;&#x5927;&#xFF0C;&#x5F53;Eden&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x7ECF;&#x8FC7;&#x5783;&#x573E;&#x56DE;&#x6536;&#x6CA1;&#x6709;&#x88AB;&#x56DE;&#x6536;&#x6389;&#x65F6;&#xFF0C;&#x4F1A;&#x5728;&#x4E24;&#x4E2A;Survivor&#x4E4B;&#x95F4;&#x6765;&#x56DE;Copy&#xFF0C;&#x5F53;&#x6EE1;&#x8DB3;&#x67D0;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;Copy&#x6B21;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;Copy&#x5230;Tenured&#x3002;&#x663E;&#x7136;&#xFF0C;Survivor&#x53EA;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x5BF9;&#x8C61;&#x5728;&#x5E74;&#x8F7B;&#x4EE3;&#x4E2D;&#x7684;&#x9017;&#x7559;&#x65F6;&#x95F4;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x88AB;&#x5783;&#x573E;&#x56DE;&#x6536;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</li>
+</ul>
+</li>
+<li>Tenured&#xFF08;&#x5E74;&#x8001;&#x4EE3;&#xFF09;[&#x542F;&#x52A8;&#x5206;&#x914D;&#x5806;&#x5185;&#x5B58;]&#xFF08;-Xmx:3G&#xFF09;</li>
+<li>&#x6C38;&#x4E45;&#x4EE3;&#xFF08;Perm&#xFF09;[JVM&#x5206;&#x914D;&#x5185;&#x5B58;] &#xFF08;-XX:PermSize -XX:MaxPermSize&#xFF09;</li>
+</ul>
+<h3 id="2&#x5783;&#x573E;&#x56DE;&#x6536;&#x7B97;&#x6CD5;">2.&#x5783;&#x573E;&#x56DE;&#x6536;&#x7B97;&#x6CD5;</h3>
+<p>&#x5783;&#x573E;&#x56DE;&#x6536;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF0C;&#x90FD;&#x57FA;&#x4E8E;&#x6807;&#x8BB0;-&#x6E05;&#x9664;&#xFF08;&#x590D;&#x5236;&#xFF09;&#x7B97;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>Serial&#x7B97;&#x6CD5;&#xFF08;&#x5355;&#x7EBF;&#x7A0B;&#xFF09;</li>
+<li>&#x5E76;&#x884C;&#x7B97;&#x6CD5;</li>
+<li>&#x5E76;&#x53D1;&#x7B97;&#x6CD5; </li>
+</ul>
+<h1 id="jvm&#x53C2;&#x6570;">JVM&#x53C2;&#x6570;</h1>
+<h2 id="jvm-&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x7F16;&#x8BD1;&#x5668;&#x6A21;&#x5F0F;">JVM &#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x7F16;&#x8BD1;&#x5668;&#x6A21;&#x5F0F;</h2>
+<ul>
+<li>&#x7C7B;&#x578B;&#xFF1A;-server and -client</li>
+<li>&#x7248;&#x672C;&#x4FE1;&#x606F;&#xFF1A;-version and -showversion</li>
+<li>&#x7F16;&#x8BD1;&#x5668;&#x6A21;&#x5F0F;&#xFF1A;-Xint&#xFF08;&#x89E3;&#x91CA;&#x6A21;&#x5F0F; &#x6267;&#x884C;&#x6240;&#x6709;&#x3010;&#x6162;&#x3011;&#xFF09;, -Xcomp&#xFF08;JIT &#x7F16;&#x8BD1;&#x5668;&#x5C11;&#x90E8;&#x5206;&#x529F;&#x80FD;&#xFF09;, &#x548C; -    Xmixed&#xFF08;&#x6DF7;&#x5408;&#x6A21;&#x5F0F;&#xFF09;</li>
+<li>&#x53C2;&#x6570;&#x5206;&#x7C7B;&#x548C;&#x5373;&#x65F6;&#xFF08;JIT&#xFF09;&#x7F16;&#x8BD1;&#x5668;&#x8BCA;&#x65AD;</li>
+<li>&#x6807;&#x51C6;&#x53C2;&#x6570;<ul>
+<li>X&#x53C2;&#x6570;</li>
+<li>XX&#x53C2;&#x6570;<ul>
+<li>-XX:+PrintCompilation &#x8F93;&#x51FA;&#x4E00;&#x4E9B;&#x5173;&#x4E8E;&#x4ECE;&#x5B57;&#x8282;&#x7801;&#x8F6C;&#x5316;&#x6210;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x7684;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;</li>
+<li>-XX:+CITime JVM &#x5173;&#x95ED;&#x65F6;&#x5F97;&#x5230;&#x5404;&#x79CD;&#x7F16;&#x8BD1;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</li>
+<li>-XX:+PrintFlagsFinal and -XX:+PrintFlagsInitial &#x6253;&#x5370;&#x6240;&#x6709; XX &#x53C2;&#x6570;&#x53CA;&#x503C;</li>
+<li>-XX:+PrintCommandLineFlags&#x6253;&#x5370;&#x51FA;&#x90A3;&#x4E9B;&#x5DF2;&#x7ECF;&#x88AB;&#x7528;&#x6237;&#x6216;&#x8005; JVM &#x8BBE;&#x7F6E;&#x8FC7;&#x7684;&#x8BE6;&#x7EC6;&#x7684; XX &#x53C2;&#x6570;&#x7684;&#x540D;&#x79F0;&#x548C;&#x503C; </li>
+<li>-XX:+HeapDumpOnOutOfMemoryError and -XX:HeapDumpPath &#x5806;&#x5185;&#x5B58;&#x5FEB;&#x7167;</li>
+<li>-XX:OnOutOfMemoryError &#x5F53;&#x5185;&#x5B58;&#x6EA2;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x6307;&#x4EE4;</li>
+<li>-XX:PermSize and -XX:MaxPermSize &#x6C38;&#x4E45;&#x4EE3;&#x5806;&#x5185;&#x5B58;</li>
+<li>-XX:InitialCodeCacheSize and -XX:ReservedCodeCacheSize&#x4EE3;&#x7801;&#x7F13;&#x5B58;</li>
+<li>-XX:+UseCodeCacheFlushing&#x5F53;&#x4EE3;&#x7801;&#x7F13;&#x5B58;&#x88AB;&#x586B;&#x6EE1;&#x65F6;&#x8BA9; JVM &#x653E;&#x5F03;&#x4E00;&#x4E9B;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;<h2 id="&#x5185;&#x5B58;&#x8C03;&#x4F18;">&#x5185;&#x5B58;&#x8C03;&#x4F18;</h2>
+&#x6240;&#x6709;&#x5DF2;&#x5236;&#x5B9A;&#x7684; HotSpot &#x5185;&#x5B58;&#x7BA1;&#x7406;&#x548C;&#x5783;&#x573E;&#x56DE;&#x6536;&#x7B97;&#x6CD5;&#x90FD;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x5806;&#x5185;&#x5B58;&#x5212;&#x5206;&#xFF1A;&#x65B0;&#x751F;&#x4EE3;&#xFF08;young generation&#xFF09;&#x91CC;&#x5B58;&#x50A8;&#x7740;&#x65B0;&#x5206;&#x914D;&#x7684;&#x548C;&#x8F83;&#x5E74;&#x8F7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8001;&#x5E74;&#x4EE3;&#xFF08;old generation&#xFF09;&#x91CC;&#x5B58;&#x50A8;&#x7740;&#x957F;&#x5BFF;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5728;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6C38;&#x4E45;&#x4EE3;&#xFF08;permanent generation&#xFF09;&#x5B58;&#x50A8;&#x7740;&#x90A3;&#x4E9B;&#x9700;&#x8981;&#x4F34;&#x968F;&#x6574;&#x4E2A; JVM &#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x5DF2;&#x52A0;&#x8F7D;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x5B9A;&#x4E49;&#x6216;&#x8005; String &#x5BF9;&#x8C61;&#x5185;&#x90E8; Cache&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5047;&#x8BBE;&#x5806;&#x5185;&#x5B58;&#x662F;&#x6309;&#x7167;&#x65B0;&#x751F;&#x4EE3;&#x3001;&#x8001;&#x5E74;&#x4EE3;&#x548C;&#x6C38;&#x4E45;&#x4EE3;&#x8FD9;&#x4E00;&#x7ECF;&#x5178;&#x7B56;&#x7565;&#x5212;&#x5206;&#x7684;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x4E00;&#x4E9B;&#x5806;&#x5185;&#x5B58;&#x5212;&#x5206;&#x7B56;&#x7565;&#x4E5F;&#x662F;&#x53EF;&#x884C;&#x7684;&#xFF0C;&#x4E00;&#x4E2A;&#x7A81;&#x51FA;&#x7684;&#x4F8B;&#x5B50;&#x5C31;&#x662F;&#x65B0;&#x7684; G1 &#x5783;&#x573E;&#x56DE;&#x6536;&#x5668;&#xFF0C;&#x5B83;&#x6A21;&#x7CCA;&#x4E86;&#x65B0;&#x751F;&#x4EE3;&#x548C;&#x8001;&#x5E74;&#x4EE3;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x76EE;&#x524D;&#x7684;&#x5F00;&#x53D1;&#x8FDB;&#x7A0B;&#x4F3C;&#x4E4E;&#x8868;&#x660E;&#x5728;&#x672A;&#x6765;&#x7684; HotSpot JVM &#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;&#x533A;&#x5206;&#x8001;&#x5E74;&#x4EE3;&#x548C;&#x6C38;&#x4E45;&#x4EE3;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>-Xms and -Xmx (or: -XX:InitialHeapSize and -XX:MaxHeapSize)&#x6307;&#x5B9A; JVM &#x7684;&#x521D;&#x59CB;&#x548C;&#x6700;&#x5927;&#x5806;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x65B0;&#x751F;&#x4EE3;&#x5783;&#x573E;&#x56DE;&#x6536;</li>
+<li>-XX:NewSize and -XX:MaxNewSize&#x65B0;&#x751F;&#x4EE3;&#x53EA;&#x662F;&#x6574;&#x4E2A;&#x5806;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x65B0;&#x751F;&#x4EE3;&#x8BBE;&#x7F6E;&#x7684;&#x8D8A;&#x5927;&#xFF0C;&#x8001;&#x5E74;&#x4EE3;&#x533A;&#x57DF;&#x5C31;&#x4F1A;&#x51CF;&#x5C11;</li>
+<li>-XX:NewRatio&#x52A8;&#x6001;&#x5206;&#x914D;&#x65B0;&#x751F;&#x4EE3;&#x4E0E;&#x8001;&#x751F;&#x4EE3;&#x6BD4;&#x4F8B;</li>
+<li>-XX:SurvivorRatio &#x52A8;&#x6001;&#x5206;&#x914D;&#x65B0;&#x751F;&#x4EE3;&#x7684;&#x4F0A;&#x7538;&#x56ED;&#x533A;&#x4E0E;&#x5E78;&#x5B58;&#x533A;&#xFF08;&#x4F0A;&#x7538;&#x56ED;&#x533A;&#x5927;&#x4E8E;&#x5E78;&#x5B58;&#x533A;&#x3010;&#x4FE9;&#x4E2A;&#x5E78;&#x5B58;&#x533A;&#x5927;&#x5C0F;&#x76F8;&#x540C;&#x3011;&#xFF09;</li>
+<li>-XX:+PrintTenuringDistribution</li>
+<li>-XX:InitialTenuringThreshold&#xFF0C; -XX:MaxTenuringThreshold and -XX:TargetSurvivorRatio</li>
+<li>-XX:+NeverTenure and -XX:+AlwaysTenure</li>
+</ul>
+<h2 id="gc-&#x65E5;&#x5FD7;&#xFF08;&#x5783;&#x573E;&#x6536;&#x96C6;&#xFF09;">GC &#x65E5;&#x5FD7;&#xFF08;&#x5783;&#x573E;&#x6536;&#x96C6;&#xFF09;</h2>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8BB0;&#x5F55;&#x4E86;&#x6BCF;&#x4E00;&#x6B21;&#x7684; GC &#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x548C;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF0C;&#x901A;&#x8FC7;&#x5206;&#x6790; GC &#x65E5;&#x5FD7;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x5806;&#x8BBE;&#x7F6E;&#x548C; GC &#x8BBE;&#x7F6E;&#xFF0C;&#x6216;&#x8005;&#x6539;&#x8FDB;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5BF9;&#x8C61;&#x5206;&#x914D;&#x6A21;&#x5F0F;</p>
+<ul>
+<li>-XX:+PrintGC&#xFF08;- verbose:gc&#xFF09; &#x7B80;&#x5355;&#x65E5;&#x5FD7;&#x6A21;&#x5F0F;<pre><code>&#x6BCF;&#x4E00;&#x6B21;&#x65B0;&#x751F;&#x4EE3;&#xFF08;young generation&#xFF09;&#x7684; GC &#x548C;&#x6BCF;&#x4E00;&#x6B21;&#x7684; Full GC &#x6253;&#x5370;&#x4E00;&#x884C;&#x4FE1;&#x606F;&#x3002;
+[GC 246656K-&gt;243120K(376320K), 0.0929090 secs]
+gc&#x7C7B;&#x578B; gc&#x4F7F;&#x7528;&#x7684;&#x524D;&#x7684;&#x5806;&#x7A7A;&#x95F4; gc&#x4F7F;&#x7528;&#x540E;&#x7684;&#x5806;&#x5927;&#x5C0F; &#x5F53;&#x524D;&#x5806;&#x5BB9;&#x91CF; gc&#x6301;&#x7EED;&#x65F6;&#x95F4;
+</code></pre></li>
+<li>XX:PrintGCDetails &#x8BE6;&#x7EC6; GC &#x65E5;&#x5FD7;&#x6A21;&#x5F0F;
+```
+[GC[PSYoungGen: 142816K-&gt;10752K(142848K)] 246648K-&gt;243136K(375296K), 0.0935090 secs]
+[Times: user=0.55 sys=0.10, real=0.09 secs]</li>
+</ul>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x6B21;&#x5728; young generation &#x4E2D;&#x7684; GC&#xFF0C;&#x5B83;&#x5C06;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#x5806;&#x7A7A;&#x95F4;&#x4ECE; 246648K &#x51CF;&#x5C11;&#x5230;&#x4E86; 243136K&#xFF0C;&#x7528;&#x65F6; 0.0935090 &#x79D2;&#x3002;&#x6B64;&#x5916;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x66F4;&#x591A;&#x7684;&#x4FE1;&#x606F;&#xFF1A;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;&#xFF08;&#x5373; PSYoungGen&#xFF09;&#x3001;young generation &#x7684;&#x5927;&#x5C0F;&#x548C;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF08;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D; &#x201C;PSYoungGen&#x201D; &#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;&#x5C06; young generation &#x6240;&#x4F7F;&#x7528;&#x7684;&#x5806;&#x7A7A;&#x95F4;&#x4ECE; 142816K &#x51CF;&#x5C11;&#x5230; 10752K&#xFF09;&#x3002;
+CPU &#x65F6;&#x95F4;&#x4FE1;&#x606F; =&#x7528;&#x6237;&#x7A7A;&#x95F4;+&#x7CFB;&#x7EDF;&#x7A7A;&#x95F4;
+real gc&#x8FD0;&#x884C;&#x771F;&#x5B9E;&#x65F6;&#x95F4;
+```</p>
+<ul>
+<li>-XX:+PrintGCTimeStamps &#x548C; - XX:+PrintGCDateStamps&#x3010;&#x7EDD;&#x5BF9;&#x65F6;&#x95F4;&#x3011;&#x5C06;&#x65F6;&#x95F4;&#x548C;&#x65E5;&#x671F;&#x4E5F;&#x52A0;&#x5230; GC &#x65E5;&#x5FD7;&#x4E2D;</li>
+<li><p>-Xloggc&#xFF08;- XX:+PrintGC - XX:+PrintGCTimeStamps&#xFF09;&#x8F93;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;</p>
+<h4 id="&#x7F51;&#x7AD9;&#x6750;&#x6599;">&#x7F51;&#x7AD9;&#x6750;&#x6599;</h4>
+<p><a href="https://www.cnblogs.com/KingIceMou/p/6967129.html" target="_blank">&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x673A;&#x5236;</a></p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../process/" class="navigation navigation-prev " aria-label="Previous page: 内存管理机制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../tomcat/" class="navigation navigation-next " aria-label="Next page: tomcat优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JVM性能调优","level":"1.3.2","depth":2,"next":{"title":"tomcat优化","level":"1.3.3","depth":2,"path":"Java/tomcat/README.md","ref":"Java/tomcat/README.md","articles":[]},"previous":{"title":"内存管理机制","level":"1.3.1","depth":2,"path":"Java/process/README.md","ref":"Java/process/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Java/jvm/README.md","mtime":"2019-01-08T02:01:27.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-08T02:02:32.320Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

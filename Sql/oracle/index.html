@@ -1,0 +1,762 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Oracle 常用sql · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../mysql/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Preface/">
+            
+                <a href="../../Preface/">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Java/">
+            
+                <a href="../../Java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Java/process/">
+            
+                <a href="../../Java/process/">
+            
+                    
+                    内存管理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Java/jvm/">
+            
+                <a href="../../Java/jvm/">
+            
+                    
+                    JVM性能调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Java/tomcat/">
+            
+                <a href="../../Java/tomcat/">
+            
+                    
+                    tomcat优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../Java/cmdTools/">
+            
+                <a href="../../Java/cmdTools/">
+            
+                    
+                    jvm命令工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Linux/">
+            
+                <a href="../../Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Linux/help/">
+            
+                <a href="../../Linux/help/">
+            
+                    
+                    帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Linux/build/">
+            
+                <a href="../../Linux/build/">
+            
+                    
+                    程序构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Linux/tools/">
+            
+                <a href="../../Linux/tools/">
+            
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Linux/docker/">
+            
+                <a href="../../Linux/docker/">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../Linux/vim/">
+            
+                <a href="../../Linux/vim/">
+            
+                    
+                    vim使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../Linux/config/">
+            
+                <a href="../../Linux/config/">
+            
+                    
+                    配置介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Python/">
+            
+                <a href="../../Python/">
+            
+                    
+                    Python3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Oracle 常用sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                    mysql 优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../StructuresAlgorithms/">
+            
+                <a href="../../StructuresAlgorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../StructuresAlgorithms/java/">
+            
+                <a href="../../StructuresAlgorithms/java/">
+            
+                    
+                    Java常用数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../server/">
+            
+                <a href="../../server/">
+            
+                    
+                    服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../server/nginx/">
+            
+                <a href="../../server/nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../server/apache/">
+            
+                <a href="../../server/apache/">
+            
+                    
+                    Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Other/">
+            
+                <a href="../../Other/">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../Other/movie/">
+            
+                <a href="../../Other/movie/">
+            
+                    
+                    影视
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../Other/recommended/">
+            
+                <a href="../../Other/recommended/">
+            
+                    
+                    书籍推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../Thank/">
+            
+                <a href="../../Thank/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Oracle 常用sql</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="oracle-&#x5E38;&#x7528;sql">Oracle &#x5E38;&#x7528;SQL</h1>
+<h2 id="&#x751F;&#x4EA7;&#x5E38;&#x7528;sql">&#x751F;&#x4EA7;&#x5E38;&#x7528;sql</h2>
+<pre><code>--&#x9501;&#x8868;&#x67E5;&#x8BE2;
+SELECT object_name, machine, s.sid, s.serial#
+  FROM gv$locked_object l, dba_objects o, gv$session s
+ WHERE l.object_id&#x3000; = o.object_id
+   AND l.session_id = s.sid;
+--&#x9A8C;&#x8BC1;
+SELECT &apos;ALTER system kill session &apos;&apos;&apos; ||s.sid||&apos;,&apos;||s.serial#||&apos;&apos;&apos;&apos;
+  FROM gv$locked_object l, dba_objects o, gv$session s
+ WHERE l.object_id&#x3000; = o.object_id
+   AND l.session_id = s.sid;
+--&#x6740;&#x6389;
+ALTER system kill session &apos;2631,41719&apos;;
+
+--&#x6709;&#x5927;&#x91CF;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5FEB;&#x901F;&#x5220;&#x9664;&#x5B57;&#x6BB5;
+--alter table xxx set unused column xxxxx;
+--alter table xxx drop unused columns;
+
+--&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x7EC8;&#x6B62;
+--0.&#x67E5;&#x8BE2;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;
+select *
+  from v$db_object_cache
+ where locks &gt; 0
+   and pins &gt; 0
+   and type = &apos;PROCEDURE&apos;;
+--1. &#x5728;V$ACCESS&#x89C6;&#x56FE;&#x4E2D;&#x627E;&#x5230;&#x8981;&#x505C;&#x6B62;&#x8FDB;&#x7A0B;&#x7684;SID: 
+SELECT t.* FROM V$ACCESS t WHERE t.object=&apos;LXG_TOWERIDERR&apos;; 
+SELECT SID FROM V$ACCESS WHERE  object=&apos;LXG_TOWERIDERR&apos;;
+--2. &#x5728;V$SESSION&#x89C6;&#x56FE;&#x4E2D;&#x67E5;&#x627E;&#x5230;&#x67E5;&#x51FA;SID&#x548C;SERIAL#
+SELECT SID,SERIAL# FROM V$SESSION WHERE SID=&apos;1314&apos;; 
+select * from   V$SESSION;
+--3. &#x6740;&#x6389;&#x67E5;&#x627E;&#x51FA;&#x6765;&#x7684;&#x8FDB;&#x7A0B;
+--alter system kill session &apos;SID,SERIAL#&apos;
+alter system kill session &apos;1314,63759&apos;;  
+
+--&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;sql
+select a.program, b.spid, c.sql_text, c.SQL_ID
+  from v$session a, v$process b, v$sqlarea c
+ where a.paddr = b.addr
+   and a.sql_hash_value = c.hash_value
+   and a.username is not null;
+
+--&#x67E5;&#x770B;&#x56DE;&#x6536;&#x7AD9;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;  &#x679C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x201C;on&#x201D;&#x8868;&#x660E;&#x56DE;&#x6536;&#x7AD9;&#x662F;&#x542F;&#x52A8;&#x7684;&#xFF0C;&#x201C;off&#x201D;&#x8868;&#x660E;&#x662F;&#x5173;&#x95ED;&#x7684;
+SELECT Value FROM V$parameter WHERE Name = &apos;recyclebin&apos;;
+--&#x83B7;&#x53D6;&#x56DE;&#x6536;&#x7AD9;&#x91CC;&#x7684;&#x5185;&#x5BB9;  
+SELECT * FROM RECYCLEBIN;      
+SELECT * FROM USER_RECYCLEBIN a order by a.createtime desc;      
+SELECT * FROM DBA_RECYCLEBIN a order by a.createtime desc; 
+--&#x8FD8;&#x539F;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5BF9;&#x8C61;
+FLASHBACK TABLE xx TO BEFORE DROP RENAME TO new_xx;
+--&#x6E05;&#x7A7A;&#x56DE;&#x6536;&#x7AD9;
+PURGE TABLE xx; --&#x6E05;&#x7A7A;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x8868;
+PURGE INDEX xx; --&#x6E05;&#x7A7A;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x7D22;&#x5F15;
+PURGE RECYCLEBIN; --&#x6E05;&#x7A7A;&#x56DE;&#x6536;&#x7AD9;
+DROP TABLE table PURGE;--&#x5F53;&#x4E00;&#x4E2A;&#x8868;&#x88AB;&#x5220;&#x9664;&#xFF08;drop&#xFF09;&#x65F6;&#x5C31;&#x76F4;&#x63A5;&#x4ECE;&#x56DE;&#x6536;&#x7AD9;&#x4E2D;&#x6E05;&#x7A7A;
+</code></pre><h2 id="&#x57FA;&#x672C;">&#x57FA;&#x672C;</h2>
+<pre><code class="lang-oracle">&#x65B0;&#x5EFA;&#x8868;&#xFF1A;
+    create table table1( id varchar(300) primary key, name varchar(200) not null);
+&#x63D2;&#x5165;&#x6570;&#x636E;   
+    insert into table1 (id,name) values (&apos;aa&apos;,&apos;bb&apos;);
+&#x66F4;&#x65B0;&#x6570;&#x636E;   
+    update table1 set id = &apos;bb&apos; where id=&apos;cc&apos;;
+&#x5220;&#x9664;&#x6570;&#x636E;   
+    delete from table1 where id =&apos;cc&apos;;
+&#x5220;&#x9664;&#x8868;    
+    drop table table1;
+&#x4FEE;&#x6539;&#x8868;&#x540D;&#xFF1A; 
+    alter table table1 rename to table2
+&#x8868;&#x6570;&#x636E;&#x590D;&#x5236;&#xFF1A;
+    insert into table1 (select * from table2);
+&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;&#xFF1A; 
+    create table table1 select * from table2 where 1&gt;1;
+&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;&#x548C;&#x6570;&#x636E;&#xFF1A;
+    create table table1 select * from table2;
+&#x590D;&#x5236;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#xFF1A; 
+    create table table1 as select id, name from table2 where 1&gt;1;
+&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#xFF1A; 
+    select id,name (case gender when 0 then &apos;&#x7537;&apos; when 1 then &#x2018;&#x5973;&#x2019; end  ) gender from  table1
+</code></pre>
+<h2 id="&#x6570;&#x5B66;&#x51FD;&#x6570;">&#x6570;&#x5B66;&#x51FD;&#x6570;</h2>
+<pre><code class="lang-oracle">    &#x7EDD;&#x5BF9;&#x503C;&#xFF1A;abs()
+       select abs(-2) value from dual;          --(2)
+    &#x53D6;&#x6574;&#x51FD;&#x6570;&#xFF08;&#x5927;&#xFF09;&#xFF1A;ceil&#xFF08;&#xFF09;
+       select ceil(-2.001) value from dual;       --(-2)
+    &#x53D6;&#x6574;&#x51FD;&#x6570;&#xFF08;&#x5C0F;&#xFF09;&#xFF1A;floor&#xFF08;&#xFF09;
+       select floor(-2.001) value from dual;       --(-3)
+    &#x53D6;&#x6574;&#x51FD;&#x6570;&#xFF08;&#x622A;&#x53D6;&#xFF09;&#xFF1A;trunc&#xFF08;&#xFF09;
+       select trunc(-2.001) value from dual;       -- (-2)
+    &#x56DB;&#x820D;&#x4E94;&#x5165;&#xFF1A;round&#xFF08;&#xFF09;
+       select round(1.234564,4) value from dual;       --(1.2346)
+    &#x53D6;&#x5E73;&#x65B9;&#xFF1A;Power&#xFF08;m,n&#xFF09;
+       select power(4,2) value from dual;       --(16)
+    &#x53D6;&#x5E73;&#x65B9;&#x6839;:SQRT()
+       select sqrt(16) value from dual;       --(4)
+    &#x53D6;&#x968F;&#x673A;&#x6570;:dbms_random(minvalue,maxvalue)
+       select dbms_random.value() from dual;  (&#x9ED8;&#x8BA4;&#x662F;0&#x5230;1&#x4E4B;&#x95F4;)
+    &#x3000;select dbms_random.value(2,4) value from dual;  &#xFF08;2-4&#x4E4B;&#x95F4;&#x968F;&#x673A;&#x6570;&#xFF09;
+    &#x53D6;&#x7B26;&#x53F7;&#xFF1A;Sign()
+    &#x3000;&#x3000;select sign(-3) value from dual; --(-1)
+    &#x3000;&#x3000;select sign(3) value from dual; --(1)
+    &#x53D6;&#x96C6;&#x5408;&#x7684;&#x6700;&#x5927;&#x503C;:greatest(value)
+       select greatest(-1,3,5,7,9) value from dual;       --(9)
+    &#x53D6;&#x96C6;&#x5408;&#x7684;&#x6700;&#x5C0F;&#x503C;:least(value)
+       select least(-1,3,5,7,9) value from dual;       --(-1)
+    &#x5904;&#x7406;Null&#x503C;&#xFF1A;nvl(&#x7A7A;&#x503C;&#xFF0C;&#x4EE3;&#x66FF;&#x503C;)
+       select  nvl(null,10) value from dual;       --(10)
+       select nvl(score,10) score from student;
+</code></pre>
+<h2 id="rownum&#x76F8;&#x5173;">rownum&#x76F8;&#x5173;</h2>
+<pre><code class="lang-oracle">    rownum&#x5C0F;&#x4E8E;&#x67D0;&#x4E2A;&#x6570;&#x65F6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F5C;&#x4E3A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF08;&#x6CE8;&#x610F;oracle&#x4E0D;&#x652F;&#x6301;select top&#xFF09;
+    select * from student where rownum &lt;3;
+    &#x67E5;&#x8BE2;rownum&#x5927;&#x4E8E;&#x67D0;&#x4E2A;&#x6570;&#x503C;,&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;&#x5E76;&#x4E14;rownum&#x9700;&#x8981;&#x6709;&#x522B;&#x540D;
+    select * from(select rownum rn ,id,name from student) where rn&gt;2;
+    select * from (select rownum rn, student.* from student) where rn &gt;3;
+    &#x533A;&#x95F4;&#x67E5;&#x8BE2;
+    select * from (select rownum rn, student.* from student) where rn &gt;3 and rn&lt;6;
+    &#x6392;&#x5E8F;+&#x524D;n&#x6761;
+    select * from (select rownum rn, t.* from ( select d.* from DJDRUVER d order  by drivernumber)t )p where p.rn&lt;10;
+    &#x6392;&#x5E8F;+&#x533A;&#x95F4;&#x67E5;&#x8BE2;1
+    select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t )p where p.rn&lt;9 and p.rn&gt;6;
+    &#x6392;&#x5E8F;+&#x533A;&#x95F4;&#x67E5;&#x8BE2;2
+    select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t where rownum&lt;9 )p where p.rn&gt;6;--&#x6548;&#x7387;&#x8FDC;&#x9AD8;&#x4E8E;&#x65B9;&#x5F0F;&#x4E00;
+</code></pre>
+<h2 id="&#x5206;&#x9875;&#x67E5;&#x8BE2;">&#x5206;&#x9875;&#x67E5;&#x8BE2;</h2>
+<pre><code class="lang-oracle">    &#x6548;&#x7387;&#x4F4E;
+    select * from (select rownum rn, d.* from DJDRIVER d  )p where p.rn&lt;=20 and p.rn&gt;=10;
+    select * from (select rownum rn, d.* from DJDRIVER d  )p where p.rn between 10 and 20;
+    &#x6548;&#x7387;&#x9AD8; 
+    select * from (select rownum rn, d.* from DJDRIVER d where rownum&lt;=20 )p where p.rn&gt;=10;
+
+    &#x6392;&#x5E8F;+&#x533A;&#x95F4;&#x67E5;&#x8BE2;1&#xFF08;&#x6548;&#x7387;&#x4F4E;&#xFF09;
+    select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t )p where p.rn&lt;=20 and p.rn&gt;=10;
+    select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t )p where p.rn between 10 and 20;
+    &#x6392;&#x5E8F;+&#x533A;&#x95F4;&#x67E5;&#x8BE2;2&#xFF08;&#x6548;&#x7387;&#x9AD8;&#xFF09; 
+    select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t where rownum&lt;=20 )p where p.rn&gt;=10;
+</code></pre>
+<h2 id="&#x65F6;&#x95F4;&#x5904;&#x7406;">&#x65F6;&#x95F4;&#x5904;&#x7406;</h2>
+<p>&#x65E5;&#x671F;
+&#x5E74; yyyy yyy yy year
+&#x6708; month mm mon month
+&#x65E5;+&#x661F;&#x671F;  dd ddd(&#x4E00;&#x5E74;&#x4E2D;&#x7B2C;&#x51E0;&#x5929;) dy day 
+&#x5C0F;&#x65F6;  hh hh24 
+&#x5206; mi
+&#x79D2; ss</p>
+<pre><code>    select to_char(sysdate,&apos;yyyy-mm-dd hh24:mi:ss&apos;)currenttime, 
+           to_char(sysdate,&apos;yyyy&apos;) year,
+           to_char(sysdate,&apos;mm&apos;) month,
+           to_char(sysdate,&apos;dd&apos;) day,
+           to_char(sysdate,&apos;day&apos;) week,
+           to_char(sysdate,&apos;hh24&apos;)hour,
+           to_char(sysdate,&apos;mi&apos;) minute,
+           to_char(sysdate,&apos;ss&apos;) second
+    from dual;
+
+    months_between(to_date(&apos;03-31-2014&apos;,&apos;MM-DD-YYYY&apos;),to_date(&apos;12-31-2013&apos;,&apos;MM-DD-YYYY&apos;)) 
+
+    next_day(sysdate,6)
+</code></pre><p><a href="https://www.cnblogs.com/wishyouhappy/p/3700683.html" target="_blank">oracle&#x57FA;&#x672C;sql</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 数据库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../mysql/" class="navigation navigation-next " aria-label="Next page: mysql 优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Oracle 常用sql","level":"1.6.1","depth":2,"next":{"title":"mysql 优化","level":"1.6.2","depth":2,"path":"Sql/mysql/README.md","ref":"Sql/mysql/README.md","articles":[]},"previous":{"title":"数据库","level":"1.6","depth":1,"path":"Sql/README.md","ref":"Sql/README.md","articles":[{"title":"Oracle 常用sql","level":"1.6.1","depth":2,"path":"Sql/oracle/README.md","ref":"Sql/oracle/README.md","articles":[]},{"title":"mysql 优化","level":"1.6.2","depth":2,"path":"Sql/mysql/README.md","ref":"Sql/mysql/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sql/oracle/README.md","mtime":"2019-01-08T02:01:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-08T02:02:32.320Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
