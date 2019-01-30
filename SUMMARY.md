@@ -29,5 +29,6 @@
 1. [其它](Other/README.md)
     1. [影视](Other/movie/README.md)
     1. [书籍推荐](Other/recommended/README.md)
+    1. [编程书籍](Other/technical/README.md)
 1. [感谢](Thank/README.md)
 
