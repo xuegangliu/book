@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>配置介绍 · GitBook</title>
+        <title>Maven · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../Python/" />
+    <link rel="next" href="../../Other/" />
     
     
-    <link rel="prev" href="../vim/" />
+    <link rel="prev" href="../ide/" />
     
 
     </head>
@@ -186,9 +186,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../">
+        <li class="chapter " data-level="1.4" data-path="../../Linux/">
             
-                <a href="../">
+                <a href="../../Linux/">
             
                     
                     Linux
@@ -200,9 +200,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../help/">
+        <li class="chapter " data-level="1.4.1" data-path="../../Linux/help/">
             
-                <a href="../help/">
+                <a href="../../Linux/help/">
             
                     
                     帮助
@@ -213,9 +213,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../build/">
+        <li class="chapter " data-level="1.4.2" data-path="../../Linux/build/">
             
-                <a href="../build/">
+                <a href="../../Linux/build/">
             
                     
                     程序构建
@@ -226,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../tools/">
+        <li class="chapter " data-level="1.4.3" data-path="../../Linux/tools/">
             
-                <a href="../tools/">
+                <a href="../../Linux/tools/">
             
                     
                     常用工具
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../docker/">
+        <li class="chapter " data-level="1.4.4" data-path="../../Linux/docker/">
             
-                <a href="../docker/">
+                <a href="../../Linux/docker/">
             
                     
                     docker
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../vim/">
+        <li class="chapter " data-level="1.4.5" data-path="../../Linux/vim/">
             
-                <a href="../vim/">
+                <a href="../../Linux/vim/">
             
                     
                     vim使用
@@ -265,9 +265,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.6" data-path="./">
+        <li class="chapter " data-level="1.4.6" data-path="../../Linux/config/">
             
-                <a href="./">
+                <a href="../../Linux/config/">
             
                     
                     配置介绍
@@ -418,9 +418,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../../Tools/">
+        <li class="chapter " data-level="1.9" data-path="../">
             
-                <a href="../../Tools/">
+                <a href="../">
             
                     
                     Tools
@@ -432,9 +432,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../../Tools/ide/">
+        <li class="chapter " data-level="1.9.1" data-path="../ide/">
             
-                <a href="../../Tools/ide/">
+                <a href="../ide/">
             
                     
                     ide工具快捷键
@@ -445,9 +445,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../../Tools/maven/">
+        <li class="chapter active" data-level="1.9.2" data-path="./">
             
-                <a href="../../Tools/maven/">
+                <a href="./">
             
                     
                     Maven
@@ -564,7 +564,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >配置介绍</a>
+        <a href="../.." >Maven</a>
     </h1>
 </div>
 
@@ -579,48 +579,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h1>
-<h2 id="grubconf-&#x914D;&#x7F6E;&#x6587;&#x4EF6;">grub.conf &#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
-<p>&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x6D41;&#x7A0B;
-<img src="system_start.png" alt="&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x6D41;&#x7A0B;"></p>
+                                <h1 id="maven&#x6784;&#x5EFA;">Maven&#x6784;&#x5EFA;</h1>
+<h2 id="maven&#x751F;&#x547D;&#x5468;&#x671F;">maven&#x751F;&#x547D;&#x5468;&#x671F;</h2>
+<p><a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<p>&#x57FA;&#x672C;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</p>
 <ul>
-<li>/boot&#x76EE;&#x5F55;&#x4E0B;<ul>
-<li>vmlinuz-2.6.32-642.el6.x86_64&#x5C31;&#x662F;&#x5185;&#x6838;&#x6587;&#x4EF6;&#x5185;&#x6838;&#x6587;&#x4EF6;</li>
-<li>initramfs-2.6.32-642.el6.x86_64.img&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x9A71;&#x52A8;&#x6587;&#x4EF6;</li>
-</ul>
-</li>
-</ul>
-<p><a href="http://blog.51cto.com/zz6547/1852788" target="_blank">grub.conf&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x94FE;&#x63A5;</a></p>
-<p><img src="grub.png" alt="grub.conf"></p>
-<p>&#x7F16;&#x53F7;&#x89E3;&#x91CA;</p>
-<ul>
-<li><p>1&#x3001;&#x4ECE;&#x6CE8;&#x91CA;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8FD9;&#x4E2A;grub.conf&#x662F;&#x7531;anaconda&#x7A0B;&#x5E8F;&#x751F;&#x6210;&#x7684;&#xFF0C;anaconda&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x7684;&#x5B89;&#x88C5;&#x5411;&#x5BFC;&#x3002;</p>
-</li>
-<li><p>2&#x3001;&#x6CE8;&#x91CA;&#x4E2D;&#x6709;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#xFF1A;&#x4F60;&#x6709;&#x4E00;&#x4E2A;&#x5355;&#x72EC;boot&#x5206;&#x533A;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;kernel&#x6587;&#x4EF6;&#x548C;initrd&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;/boot&#x5206;&#x533A;&#x6765;&#x8BF4;&#x7684;&#xFF0C;
-&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x7684;boot&#x5206;&#x533A;&#x5BF9;&#x5E94;&#x7684;&#x8BBE;&#x5907;&#x662F;/dev/sda1,&#x6240;&#x4EE5;&#xFF0C;&#x6B64;&#x5904;&#x7528;root(hd0,0)&#x8868;&#x793A;&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;hd0&#x8868;&#x793A;&#x7B2C;&#x4E00;&#x5757;&#x786C;&#x76D8;&#xFF0C;
-&#x9017;&#x53F7;&#x540E;&#x9762;&#x7684;0&#x8868;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x533A;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;(hd0,0)&#x8868;&#x793A;&#x7B2C;&#x4E00;&#x5757;&#x786C;&#x76D8;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;/dev/sda1</p>
-</li>
-<li><p>3&#x3001;&#x5176;&#x4E2D;default=0&#x8868;&#x793A;&#x6709;&#x591A;&#x4E2A;grub&#x5F15;&#x5BFC;&#x83DC;&#x5355;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x54EA;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x5F15;&#x5BFC;&#x83DC;&#x5355;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5F53;&#x6709;&#x591A;&#x4E2A;
-title&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x9009;&#x62E9;&#x54EA;&#x4E2A;title&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x5F15;&#x5BFC;&#x914D;&#x7F6E;&#xFF0C;default=0&#x8868;&#x793A;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;title&#x83DC;&#x5355;&#x4E2D;&#x7684;&#x914D;
-&#x7F6E;&#x3002;&#x5176;&#x4E2D;timeout=5&#x8868;&#x793A;&#x5982;&#x679C;5&#x79D2;&#x4EE5;&#x5185;&#xFF0C;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x9009;&#x62E9;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;title&#xFF0C;&#x5219;&#x4F7F;&#x7528;default&#x4E2D;&#x6307;&#x5B9A;&#x7684;title&#x83DC;&#x5355;&#x4E2D;
-&#x7684;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x5F15;&#x5BFC;&#x3002;</p>
-</li>
-<li><p>4&#x3001;&#x5F15;&#x5BFC;&#x65F6;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x7247;&#xFF0C;&#x6B64;&#x9879;&#x4E0D;&#x5EFA;&#x8BAE;&#x8BBE;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x6B64;&#x9879;&#x914D;&#x7F6E;&#x7684;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x5F15;&#x5BFC;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x3002;</p>
-</li>
-<li><p>5&#x3001;&#x8868;&#x793A;&#x5728;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x9690;&#x85CF;&#x6240;&#x6709;title&#x83DC;&#x5355;&#xFF0C;&#x5E76;&#x4E0D;&#x8BA9;&#x7528;&#x6237;&#x76F4;&#x63A5;&#x770B;&#x5230;&#x542F;&#x52A8;&#x83DC;&#x5355;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x5E72;&#x9884;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;default&#x6240;&#x6307;&#x5B9A;&#x7684;title&#x3002;</p>
-</li>
-<li><p>6&#x3001;title&#x76F4;&#x8BD1;&#x4E3A;&quot;&#x6807;&#x9898;&quot;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;grub&#x5F15;&#x5BFC;&#x7684;&#x914D;&#x7F6E;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&#x591A;&#x4E2A;title&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53EF;&#x4EE5;&#x7528;&#x4E0D;&#x540C;&#x7684;
-&#x914D;&#x7F6E;&#x53BB;&#x5F15;&#x5BFC;&#x7CFB;&#x7EDF;&#xFF0C;title&#x4E0B;&#x9762;&#x914D;&#x7F6E;&#x9879;&#x90FD;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;title</p>
-</li>
-<li><p>7&#x3001;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x5217;&#x8868;&#x4E2D;&#x7684;kernel&#x548C;initrd&#x6240;&#x5728;&#x7684;&#x5206;&#x533A;&#xFF0C;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x9879;&#x5C31;&#x662F;&#x524D;&#x9762;&#x7F16;&#x53F7;2&#x4E2D;&#x6240;&#x63CF;&#x8FF0;&#x7684;kernel&#x6587;&#x4EF6;&#x6240;&#x5728;
-&#x7684;&#x5206;&#x533A;&#xFF0C;&#x8DDF;&#x7F16;&#x53F7;2&#x7684;&#x610F;&#x601D;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF08;&#x5177;&#x4F53;&#x610F;&#x601D;&#x53C2;&#x8003;&#x7F16;&#x53F7;2&#xFF09;&#xFF0C;&#x53EA;&#x662F;&#x7F16;&#x53F7;2&#x662F;&#x5728;&#x6CE8;&#x91CA;&#x4E2D;&#xFF0C;&#x7F16;&#x53F7;7&#x662F;CentOS 6 (2.6.32-642.el6.x86_64)&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x7F16;&#x53F7;7&#x53EA;&#x5728;CentOS 6 (2.6.32-642.el6.x86_64)&#x8FD9;&#x4E2A;title&#x7684;&#x8303;&#x56F4;&#x5185;&#x751F;
-&#x6548;&#xFF0C;&#x800C;&#x4E14;&#x518D;&#x6B21;&#x5F3A;&#x8C03;&#xFF1A;root (hd0,0)&#x8868;&#x793A;kernel&#x6587;&#x4EF6;&#x548C;initrd&#x6587;&#x4EF6;&#x6240;&#x5728;&#x5206;&#x533A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6307;&quot;&#x6839;&#x5206;&#x533A;&quot;&#x3002;</p>
-</li>
-<li><p>8&#x3001;&#x6B64;&#x5904;&#x6211;&#x4EEC;&#x53EA;&#x8BF4;&#x660E;&#x7EA2;&#x6846;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7EA2;&#x6846;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x4E5F;&#x662F;grub&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5B83;&#x6307;&#x660E;&#x4E86;kernel&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;</p>
-</li>
-<li><p>9&#x3001;initrd/initramfs-2.6.32-642.el6.x86_64.img &#x5185;&#x6838;&#x83B7;&#x53D6;&#x5230;&#x6839;&#x5206;&#x533A;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x9A71;&#x52A8;&#xFF0C;
-initramfs-2.6.32-642.el6.x86_64.img&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5C31;&#x5305;&#x542B;&#x4E86;&#x5185;&#x6838;&#x6240;&#x9700;&#x8981;&#x5BFB;&#x627E;&#x7684;&#x9A71;&#x52A8;&#x3002;</p>
-</li>
+<li>&#x9A8C;&#x8BC1;&#xFF08;validate&#xFF09; - &#x9A8C;&#x8BC1;&#x9879;&#x76EE;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;&#x6240;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x7528;</li>
+<li>&#x7F16;&#x8BD1;&#xFF08;compile&#xFF09; - &#x7F16;&#x8BD1;&#x9879;&#x76EE;&#x7684;&#x6E90;&#x4EE3;&#x7801;</li>
+<li>&#x6D4B;&#x8BD5;&#xFF08;test&#xFF09; - &#x4F7F;&#x7528;&#x5408;&#x9002;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x6846;&#x67B6;&#x6D4B;&#x8BD5;&#x7F16;&#x8BD1;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x3002;&#x8FD9;&#x4E9B;&#x6D4B;&#x8BD5;&#x4E0D;&#x5E94;&#x8BE5;&#x8981;&#x6C42;&#x4EE3;&#x7801;&#x88AB;&#x6253;&#x5305;&#x6216;&#x90E8;&#x7F72;</li>
+<li>&#x6253;&#x5305;&#xFF08;package&#xFF09; - &#x91C7;&#x7528;&#x7F16;&#x8BD1;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4EE5;&#x5176;&#x53EF;&#x5206;&#x914D;&#x683C;&#x5F0F;&#xFF08;&#x5982;JAR&#xFF09;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x3002;</li>
+<li>&#x9A8C;&#x8BC1;&#xFF08;verify&#xFF09; - &#x5BF9;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x7684;&#x7ED3;&#x679C;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x68C0;&#x67E5;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x6EE1;&#x8DB3;&#x8D28;&#x91CF;&#x6807;&#x51C6;</li>
+<li>&#x5B89;&#x88C5;&#xFF08;install&#xFF09; - &#x5C06;&#x8F6F;&#x4EF6;&#x5305;&#x5B89;&#x88C5;&#x5230;&#x672C;&#x5730;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#xFF0C;&#x7528;&#x4F5C;&#x672C;&#x5730;&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x7684;&#x4F9D;&#x8D56;&#x9879;</li>
+<li>&#x90E8;&#x7F72;&#xFF08;deploy&#xFF09; - &#x5728;&#x6784;&#x5EFA;&#x73AF;&#x5883;&#x4E2D;&#x5B8C;&#x6210;&#xFF0C;&#x5C06;&#x6700;&#x7EC8;&#x7684;&#x5305;&#x590D;&#x5236;&#x5230;&#x8FDC;&#x7A0B;&#x5B58;&#x50A8;&#x5E93;&#x4EE5;&#x4E0E;&#x5176;&#x4ED6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x548C;&#x9879;&#x76EE;&#x5171;&#x4EAB;&#x3002;</li>
 </ul>
 
                                 
@@ -649,12 +619,12 @@ initramfs-2.6.32-642.el6.x86_64.img&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5C
 
             
                 
-                <a href="../vim/" class="navigation navigation-prev " aria-label="Previous page: vim使用">
+                <a href="../ide/" class="navigation navigation-prev " aria-label="Previous page: ide工具快捷键">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../Python/" class="navigation navigation-next " aria-label="Next page: Python3">
+                <a href="../../Other/" class="navigation navigation-next " aria-label="Next page: 其它">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -665,7 +635,7 @@ initramfs-2.6.32-642.el6.x86_64.img&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5C
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"配置介绍","level":"1.4.6","depth":2,"next":{"title":"Python3","level":"1.5","depth":1,"path":"Python/README.md","ref":"Python/README.md","articles":[]},"previous":{"title":"vim使用","level":"1.4.5","depth":2,"path":"Linux/vim/README.md","ref":"Linux/vim/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Linux/config/README.md","mtime":"2019-01-30T08:14:31.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T08:15:27.866Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Maven","level":"1.9.2","depth":2,"next":{"title":"其它","level":"1.10","depth":1,"path":"Other/README.md","ref":"Other/README.md","articles":[{"title":"影视","level":"1.10.1","depth":2,"path":"Other/movie/README.md","ref":"Other/movie/README.md","articles":[]},{"title":"书籍推荐","level":"1.10.2","depth":2,"path":"Other/recommended/README.md","ref":"Other/recommended/README.md","articles":[]},{"title":"编程书籍","level":"1.10.3","depth":2,"path":"Other/technical/README.md","ref":"Other/technical/README.md","articles":[]}]},"previous":{"title":"ide工具快捷键","level":"1.9.1","depth":2,"path":"Tools/ide/README.md","ref":"Tools/ide/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Tools/maven/README.md","mtime":"2019-01-30T08:14:31.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T08:15:27.866Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
