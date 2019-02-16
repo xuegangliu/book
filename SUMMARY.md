@@ -32,8 +32,8 @@
     1. [电影](Movie/movie/README.md)
     1. [电影名人](Movie/star/README.md)
     1. [经典台词](Movie/word/README.md)
-1. [其它](Other/README.md)
-    1. [书籍推荐](Other/recommended/README.md)
-    1. [编程书籍](Other/technical/README.md)
+1. [Book](Book/README.md)
+    1. [书籍推荐](Book/recommended/README.md)
+    1. [编程书籍](Book/technical/README.md)
 1. [感谢](Thank/README.md)
 
