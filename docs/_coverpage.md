@@ -1,15 +1,10 @@
 ![logo](_media/icon.png)
 
-# book
+# reading notes
 
-> 阅读
+> 读书笔记
 
-* 诗歌
-* 名人传
-* 技术
-* 小说
-* 历史
-* 心理
+* 读书记录
 
-[GitHub](https://github.com/xuegangliu/book/)
-[Get Started](https://github.com/xuegangliu/abook)
+[GitHub](https://github.com/htmlsite/reading-notes)
+[Get Started](https://github.com/htmlsite/reading-notes)

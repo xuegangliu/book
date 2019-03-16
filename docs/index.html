@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Book</title>
+  <title>Reading notes</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -20,8 +20,8 @@
   <!--<div data-app id="main">加载中</div>-->
   <script>
     window.$docsify = {
-      name: 'book',
-      repo: 'https://github.com/xuegangliu/book',
+      name: '读书笔记',
+      repo: 'https://github.com/htmlsite/reading-notes',
       logo: '/_media/icon.png',
       nameLink: '/',
 
@@ -87,7 +87,7 @@
               var footer = [
                   '<hr/>',
                   '<footer>',
-                  '<span><a href="https://github.com/xuegangliu">xuegangliu</a> &copy;2019.</span>',
+                  '<span><a href="https://github.com/htmlsite">htmlsite</a> &copy;2019.</span>',
                   '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
                   '</footer>'
               ].join('')
@@ -98,13 +98,13 @@
           },
           function(hook, vm) {
               hook.beforeEach(function (html) {
-                  var url = 'https://github.com/xuegangliu/book/master/docs' + vm.route.file
-                  var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+                  var url = 'https://github.com/htmlsite/reading-notes/master/docs' + vm.route.file
+                  var editHtml = '[📝点击修改文档](' + url + ')\n'
 
                   return editHtml
                       + html
                       + '\n----\n'
-                      + 'Last modified {docsify-updated} '
+                      + '最后修改时间: {docsify-updated} '
                       + editHtml
               })
           }
