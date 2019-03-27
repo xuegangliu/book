@@ -36,7 +36,8 @@
     * 人工智能简史
 * 技术
     * 图解 HTTP
-    * 深入理解Java虚拟机：JVM高级特性与最佳实践（第二版）
+    * [深入理解Java虚拟机：JVM高级特性与最佳实践（第2版）](technology/java_virtual_machine2.md)
+    * [JavaScript权威指南（第6版）](technology/javascript_v6.md)
     * Java多线程编程核心技术
     * 分布式Java应用
     * Java从初级到精通
@@ -93,5 +94,7 @@
 * 心理学
     * 高情商沟通术
     * 遇见未知的自己
+* 管理
+    * [阿里巴巴人力资源管理](manage/alibaba_manage.md)
 * Language
     * [中文](/)

@@ -1,3 +1,5 @@
 * [首页](/)
 * [目录](book_star.md)
+* [深入理解Java虚拟机：JVM高级特性与最佳实践（第2版）](technology/java_virtual_machine2.md)
+* [JavaScript权威指南（第6版）](technology/javascript_v6.md)
 * [阿里巴巴人力资源管理](manage/alibaba_manage.md)
